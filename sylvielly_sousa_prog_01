@@ -42,3 +42,4 @@ imshow(S);
 //sobrepor a imagem na marca dagua
 Mrd_complement = imcomplement(Mredimens);
 S = imadd(Mrd_complement,Jpequeno);
+imshow(S);
