@@ -6,7 +6,7 @@
 //PROGRAMA 01
 
 //passo 1
-//em janela de comandos do octave
+//em janela de comandos do octave faca
 //primeiramente carregar local de arquivo do computador onde estão localizadas as imagens que voce ira manipular
 
 //passo 2
@@ -31,3 +31,14 @@ Jpequeno = imresize(J,0.5);
 figure(2)
 imshow(Jpequeno);
 
+//passo 6
+//inserir a marca dagua (criando uma marca dagua aleatoria no bloco de notas e inserindo no paint pra salvar
+M = imread("marca_dagua.jpg");
+Mredimens = imresize(M,[2064 1161]);
+S = imadd(Jpequeno,Mredimens);
+imshow(S);
+
+//passo 7
+//sobrepor a imagem na marca dagua
+Mrd_complement = imcomplement(Mredimens);
+S = imadd(Mrd_complement,Jpequeno);
