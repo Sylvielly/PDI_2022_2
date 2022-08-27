@@ -3,15 +3,14 @@
 //DATA: 27-AGO-2022
 //PROF. DANIEL BRITO
 
-//PROGRAMA 01
+//PROGRAMA 01 - AULA PARA CARREGAR, ROTACIONAR, REDIMENSIONAR E INSERIR MARCA D'AGUA
 
 //passo 1
 //em janela de comandos do octave faca
 //primeiramente carregar local de arquivo do computador onde estão localizadas as imagens que voce ira manipular
 
 //passo 2
-//para realizar a leitura da imagem
-I = imread("photo.png");
+I = imread("photo.png");                            //para realizar a leitura da imagem
 imshow(I);
 
 //passo 3
@@ -19,9 +18,8 @@ imshow(I);
 //pacote de processamento digital de imagens no octave: <https://octave.sourceforge.io/image/>
 
 //passo 4
-//para rotacionar a imagem
 figure(1)
-J = imrotate(I,-90);
+J = imrotate(I,-90);                                  //para rotacionar a imagem
 imshow(J);
 
 //passo 5
@@ -33,13 +31,11 @@ imshow(Jpequeno);
 
 //passo 6
 //inserir a marca dagua (criando uma marca dagua aleatoria no bloco de notas e inserindo no paint pra salvar
-M = imread("marca_dagua.jpg");
-Mredimens = imresize(M,[2064 1161]);
-S = imadd(Jpequeno,Mredimens);
-imshow(S);
+M = imread("marca_dagua.jpg");                            //carregar imagem da marca dagua da mesma forma que foi realizado com a imagem anterior
+Mredimens = imresize(M,[2064 1161]);                      //redimensionar a marca dagua para ficar do mesmo tamanho da imagem anterior
 
 //passo 7
 //sobrepor a imagem na marca dagua
-Mrd_complement = imcomplement(Mredimens);
-S = imadd(Mrd_complement,Jpequeno);
+Mrd_complement = imcomplement(Mredimens);                 //complementar a imagem com os níveis corretos, de forma que elas se sobreponham 
+S = imadd(Mrd_complement,Jpequeno);                       //soma das imagens pixel a pixel
 imshow(S);
