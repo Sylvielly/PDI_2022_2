@@ -10,7 +10,7 @@
 %primeiramente carregar local de arquivo do computador onde estão localizadas as imagens que voce ira manipular
 
 %passo 2
-I = imread("photo.png");                            %//para realizar a leitura da imagem
+I = imread("photo.jpg");                            %//para realizar a leitura da imagem
 imshow(I);
 
 %//passo 3
