@@ -39,24 +39,3 @@ Mrd_complement = imcomplement(Mredimens);                 %complementar a imagem
 S = imadd(Mrd_complement,Jpequeno);                       %soma das imagens pixel a pixel
 figure(3)
 imshow(S);
-
-##Visualizar camadas da imagem RGB
-I=imread("teste.jpeg");
-subplot(4,1,1)
-J=I;
-imshow(I)
-subplot(4,1,2)
-I(:,:,1)=0;
-I(:,:,2)=0;
-imshow(I)
-
-subplot(4,1,3)
-I=J;
-I(:,:,1)=0;
-I(:,:,3)=0;
-imshow(I)
-subplot(4,1,4)
-I=J;
-I(:,:,2)=0;
-I(:,:,3)=0;
-imshow(I)
