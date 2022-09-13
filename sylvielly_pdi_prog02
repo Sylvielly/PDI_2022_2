@@ -32,3 +32,9 @@ imshow(Imagem_teste);
 Imagem_teste = Imagem;
 Imagem_teste(200:300,500:600,:)=0;
 imshow(Imagem_teste);
+
+%utilizar filtro espacial
+figure(6)
+f = fspecial("average",30);
+Imagem_teste = imfilter(Imagem,f);
+imshow(Imagem_teste);
