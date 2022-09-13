@@ -1,6 +1,6 @@
 %PROCESSAMENTO DIGITAL DE IMAGENS*/
 %AUTHOR: SYLVIELLY S. SOUSA
-%DATA: 13-SET-2022
+%DATA: 27-AGO-2022
 %PROF. DANIEL BRITO
 
 %PROGRAMA 02 - AULA PARA CARREGAR, ROTACIONAR, BORRAR A IMAGEM
@@ -19,5 +19,16 @@ figure(2)
 I_teste = Imagem_rot(200:300,500:600,:); 
 imshow(I_teste);
 
+%utiliza a funcao imcrop para realizar a selecao dos pontos
 figure(3)
 imcrop(I_teste);
+
+%redimensiona imagem
+Imagem_teste = imresize(I_teste,[960 720]);
+figure(5)
+imshow(Imagem_teste);
+
+%borrar imagem
+Imagem_teste = Imagem;
+Imagem_teste(200:300,500:600,:)=0;
+imshow(Imagem_teste);
