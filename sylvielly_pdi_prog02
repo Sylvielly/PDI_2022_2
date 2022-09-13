@@ -1,0 +1,20 @@
+%PROCESSAMENTO DIGITAL DE IMAGENS*/
+%AUTHOR: SYLVIELLY S. SOUSA
+%DATA: 27-AGO-2022
+%PROF. DANIEL BRITO
+
+%PROGRAMA 02 - AULA PARA CARREGAR, ROTACIONAR, BORRAR A IMAGEM
+clc
+clear all
+pkg load image     %roda biblioteca
+
+%captura a imagem e rotaciona
+figure(1)
+Imagem = imread("photo.jpg");
+Imagem_rot = imrotate(Imagem,0);
+imshow(Imagem_rot);
+
+%seleciona coordenadas desejadas
+figure(2)
+I_teste = Imagem_rot(200:300,500:600,:); 
+imshow(I_teste);
