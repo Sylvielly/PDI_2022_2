@@ -15,6 +15,7 @@ im = imread("photo.jpg");
 im_rot = imrotate(im,-90);
 imshow(im_rot);
 
+%trocar por size
 %input space corners
 incp = [1 1; 3000 1; 3000 4000; 1 4000];
 udata = [min(incp(:,1)) max(incp(:,1))];
