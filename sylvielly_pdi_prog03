@@ -1,0 +1,35 @@
+%PROCESSAMENTO DIGITAL DE IMAGENS*/
+%AUTHOR: SYLVIELLY S. SOUSA
+%DATA: 22-SET-2022
+%PROF. DANIEL BRITO
+
+%PROGRAMA 0X - AULA PARA REFLETIR A IMAGEM EM TORNO DO EIXO X
+clc
+clear all
+pkg load image     %roda biblioteca
+
+## Various linear transforms
+ figure (); 
+ im = [checkerboard(20, 2, 4); checkerboard(40, 1, 2)];
+ %input space corners
+ incp = [1 1; 160 1; 160 160; 1 160];
+ udata = [min(incp(:,1)) max(incp(:,1))];
+ vdata = [min(incp(:,2)) max(incp(:,2))];
+ subplot (2,3,1); 
+ imshow (im)
+ hold on
+ plot (incp(:,1), incp(:,2), 'ob')
+ axis on
+ xlabel ('Original')
+ 
+%reflection around x axis
+ outcp = incp;
+ outcp(:,2) *= -1;
+ T = cp2tform (incp, outcp, 'similarity');
+ subplot (2,3,5); 
+ [im2 xdata ydata] = imtransform (im, T, 'udata', udata,
+                                  'vdata', vdata, 'fillvalues', 1 );
+ imh = imshow (im2); set (imh, 'xdata', xdata, 'ydata', ydata) 
+ set (gca, 'xlim', xdata, 'ylim', ydata)
+ axis on, hold on, xlabel ('Reflection');
+ plot (outcp(:,1), outcp(:,2), 'or')
