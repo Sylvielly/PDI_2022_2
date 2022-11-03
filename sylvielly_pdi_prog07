@@ -1,0 +1,31 @@
+%PROCESSAMENTO DIGITAL DE IMAGENS*/
+%AUTHOR: SYLVIELLY S. SOUSA
+%DATA: 25-OUT-2022
+%PROF. DANIEL BRITO
+
+%PROGRAMA 07 - APLICAR BORDAS NA IMAGEM
+
+% Passo a Passo:
+% 1. Imagem original para escala de cinza
+% 2. Escolher dois metodos para aplicar edge
+% 3. Modificar os parametros do melhor dos dois metodos
+% 4. Aplicar um filtro de media na imagem original e aplicar o melhor metodo
+% Limpar tudo e diretorio:
+
+clear all, clc, close all;
+
+% Carregar pacote de imagem:
+pkg load image;
+
+% Carregar imagem:
+IM = imread("IMG1.jpg");
+
+% 1. Escala de cinza:
+IMg = rgb2gray(IM);
+
+% 2. Metodo 1: Canny:
+IMc = edge(IMg,"Canny"); 
+imshow(IMc)
+
+% 2. Metodo 2: 
+
