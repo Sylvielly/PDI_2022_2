@@ -1,5 +1,8 @@
 clear all;
 close all;
+
+pkg load image
+
 I=imread("imof.jpg");
 I=imrotate(I,-90);
 figure
