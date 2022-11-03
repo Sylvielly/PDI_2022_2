@@ -3,7 +3,7 @@
 %DATA: 25-OUT-2022
 %PROF. DANIEL BRITO
 
-%PROGRAMA 07 - APLICAR BORDAS NA IMAGEM
+%PROGRAMA 07 - APLICAR EDGE NA IMAGEM
 
 % Passo a Passo:
 % 1. Imagem original para escala de cinza
