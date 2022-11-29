@@ -1,0 +1,17 @@
+%PROCESSAMENTO DIGITAL DE IMAGENS
+%AUTHORS: SYLVIELLY SOUSA / LINDALVA ALMEIDA / LEONARDO ADRIANO
+%ENGENHARIA DE CONTROLE E AUTOMACAO - IFCE CAMPUS MARACANAU
+%CLASSIFICADORES
+
+%carregar a imagem  
+img = imread("photo.jpg");
+imshow(img);
+
+function class = my_iris_PCA_classifier(feat)
+  class = zeros(size(feat,1),1);
+  b = 1.5;
+  m = 1.5;
+    for i=1:size(feat) 
+        
+    endfor
+  endfunction
